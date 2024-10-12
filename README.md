@@ -23,5 +23,5 @@
 1. โคลนรีโพซิทอรี:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/Boocheiei/Wed-Supee-NextJs
    cd your-repo-name
