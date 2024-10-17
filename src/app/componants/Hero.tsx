@@ -4,6 +4,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { styled } from '@mui/material/styles';
+import Image from '../../../public/hero.jpeg';
 
 const StyledBox = styled('div')(({ theme }) => ({
   alignSelf: 'center',
@@ -25,9 +26,9 @@ export default function Hero() {
     <Box
       sx={{
         width: '100%',
-        backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 90%), transparent)',
+        backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(0, 100%, 40%), transparent)',
       }}
-    >
+    ><img src="/hero.jpeg" alt="" />
       <Container
         sx={{
           display: 'flex',

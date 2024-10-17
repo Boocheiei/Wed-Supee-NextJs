@@ -1,11 +1,11 @@
 import React from 'react'
 
-function About() {
+type Props = {}
+
+export default function Aboutpage({}: Props) {
   return (
-    <div>
-        <h1>About</h1>
-    </div>
+    <>
+    <h1>About</h1>
+</>
   )
 }
-
-export default About

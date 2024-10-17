@@ -18,6 +18,7 @@ import Link from 'next/link';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
+  
   alignItems: 'center',
   justifyContent: 'space-between',
   flexShrink: 0,
@@ -62,7 +63,7 @@ export default function AppAppBar() {
                 บริการของเรา
               </Button>
               </Link>
-              <Link href="/">
+              <Link href="/contact">
               <Button variant="text" color="info" size="small">
                 ติดต่อเรา
               </Button>
