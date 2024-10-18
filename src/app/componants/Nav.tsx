@@ -53,12 +53,12 @@ export default function AppAppBar() {
                 หน้าแรก
               </Button>
               </Link>
-              <Link href="/">
+              <Link href="/products">
               <Button variant="text" color="info" size="small">
                 สินค้าทั้งหมด
               </Button>
               </Link>
-              <Link href="/">
+              <Link href="/servicepang">
               <Button variant="text" color="info" size="small">
                 บริการของเรา
               </Button>

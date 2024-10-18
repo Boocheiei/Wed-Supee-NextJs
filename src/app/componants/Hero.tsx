@@ -1,44 +1,23 @@
-"use client";
+// pages/index.tsx
+import Slider from '../componants/Slider';
+import '../../assets/slider.scss';
 
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import { styled } from '@mui/material/styles';
-import Image from '../../../public/hero.jpeg';
-
-const StyledBox = styled('div')(({ theme }) => ({
-  alignSelf: 'center',
-  width: '100%',
-  height: 400,
-  marginTop: theme.spacing(8),
-  borderRadius: theme.shape.borderRadius,
-  outline: '6px solid hsla(220, 25%, 80%, 0.2)',
-  border: `1px solid ${theme.palette.grey[200]}`,
-  boxShadow: '0 0 12px 8px hsla(220, 25%, 80%, 0.2)',
-  [theme.breakpoints.up('sm')]: {
-    marginTop: theme.spacing(10),
-    height: 700,
+const images = [
+  {
+    source: "https://images.pexels.com/photos/6447203/pexels-photo-6447203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    title: "Little Venice in Colmar"
   },
-}));
+  {
+    source: "https://images.pexels.com/photos/3283186/pexels-photo-3283186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    title: "Back View of a Man Standing on a Rock near the Waterfalls"
+  },
+  // ... (add the rest of your images)
+];
 
-export default function Hero() {
+const Hero: React.FC = () => {
   return (
-    <Box
-      sx={{
-        width: '100%',
-        backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(0, 100%, 40%), transparent)',
-      }}
-    ><img src="/hero.jpeg" alt="" />
-      <Container
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          pt: { xs: 14, sm: 20 },
-          pb: { xs: 8, sm: 12 },
-        }}
-      >
-      </Container>
-    </Box>
+    <Slider title="React Slider" slides={images} />
   );
-}
+};
+
+export default Hero;

@@ -1,0 +1,185 @@
+$primary: #343a40;
+
+* {
+  margin: 0px;
+  outline: none;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background-color: darken($primary, 5%);
+  color: white;
+  font-family: fantasy, cursive;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("https://images.pexels.com/photos/6447203/pexels-photo-6447203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  animation: zoomin 10s linear infinite alternate;
+
+  @media (max-width: 480px) {
+    & {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+h3 {
+  font-family: fantasy, cursive;
+}
+
+@keyframes zoomin {
+  0% {
+    background-size: auto 200%;
+  }
+  50% {
+    background-size: auto 250%;
+  }
+  100% {
+    background-size: auto 200%;
+  }
+}
+
+.sliderWrapper {
+  max-width: clamp(680px, 76vw, 768px);
+  width: 90%;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  position: relative;
+  text-align: center;
+
+  .sliderTitle {
+    margin: 0 0 1rem;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+
+  .slider {
+    .slide:not(.active) {
+      opacity: 0.2;
+      position: absolute;
+      max-width: 0;
+      max-height: 0;
+      transition: opacity 800ms linear;
+    }
+    .slide {
+      width: 100%;
+      display: block;
+      position: relative;
+      padding-bottom: 75%;
+      max-height: 0;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0px 8px 16px 0px lighten($primary, 8%);
+      opacity: 1;
+      transition: opacity 800ms linear;
+
+      @media (max-width: 480px) {
+        & {
+          padding-bottom: 100%;
+        }
+      }
+
+      & > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center center;
+        filter: contrast(1.3) brightness(0.9);
+        transition: all 300ms;
+      }
+
+      & > h3 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        margin: 0;
+        background-color: rgba($primary, 0.69);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(1rem, 1.3vw, 1.3rem);
+        font-weight: 500;
+        transition: padding 300ms;
+      }
+
+      &:hover {
+        & > img {
+          filter: contrast(1.3) brightness(1);
+        }
+        & > h3 {
+          padding: 1.2rem 1rem;
+          background-color: rgba($primary, 0.75);
+        }
+      }
+    }
+  }
+
+  & > button {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: rgba($primary, 0.69);
+    cursor: pointer;
+    color: white;
+    padding: 0.5rem;
+    margin: 0;
+    z-index: 100;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 300ms;
+
+    &:hover {
+      background-color: rgba($primary, 0.75);
+    }
+
+    &.prevArrow {
+      left: clamp(0px, 1vw, 1rem);
+    }
+
+    &.nextArrow {
+      right: clamp(0px, 1vw, 1rem);
+    }
+
+    @media (max-width: 480px) {
+      & {
+        width: 36px;
+        height: 36px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .sliderPagination {
+    margin-top: 2rem;
+    background-color: rgba($primary, 0.69);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: inline-block;
+    text-align: center;
+    pointer-events: none;
+  }
+}
