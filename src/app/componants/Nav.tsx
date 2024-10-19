@@ -18,7 +18,6 @@ import Link from 'next/link';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
-  
   alignItems: 'center',
   justifyContent: 'space-between',
   flexShrink: 0,

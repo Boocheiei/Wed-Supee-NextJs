@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import AppAppBar from "./componants/Nav";
-import Footer from "./componants/footer";
 import Hero from "./componants/Hero";
+import Footer from "./componants/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,7 +33,9 @@ export default function RootLayout({
       >
         <Hero />
         <AppAppBar />
+      
         {children}
+
         <Footer/>
       </body>
     </html>

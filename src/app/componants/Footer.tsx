@@ -29,12 +29,13 @@ export default function Footer() {
   return (
     <Container
       sx={{
+        width :'100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         gap: { xs: 4, sm: 8 },
         py: { xs: 8, sm: 10 },
-        textAlign: { sm: 'center', md: 'left' },
+        textAlign: { sm: 'center', md: 'left' }
       }}
     >
       <Box

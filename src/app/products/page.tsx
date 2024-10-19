@@ -24,17 +24,17 @@ const Products = (props: Props) => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={6}>
-            <Item>1</Item>1
+        <Grid container rowSpacing={8} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className='mx-1'>
+          <Grid item xs={3}>
+            <Item>1</Item>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={3}>
             <Item>2</Item>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={3}>
             <Item>3</Item>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={3}>
             <Item>4</Item>
           </Grid>
         </Grid>
